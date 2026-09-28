@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Fixed Asset Recording Form - ALDEEE Tax Consulting</title>
+</head>
+
+<body>
+
+    <h1>Company Fixed Asset Recording Form</h1>
+    <p>ALDEEE Tax Consulting</p>
+
+    <form method="post" action="#" enctype="multipart/form-data">
+
+        <fieldset>
+            <legend>Asset Identification</legend>
+
+            <label for="asset_name">Asset Name:</label><br>
+            <input 
+                type="text" 
+                id="asset_name" 
+                name="asset_name" 
+                placeholder="Automated Production Machine"
+            >
+            <br><br>
+
+            <label for="asset_code">Asset Code:</label><br>
+            <input 
+                type="text" 
+                id="asset_code" 
+                name="asset_code" 
+                placeholder="ME2025001 or FA-001"
+            >
+            <br><br>
+
+            <label for="serial_number">Asset Serial Number:</label><br>
+            <input 
+                type="text" 
+                id="serial_number" 
+                name="serial_number"
+            >
+            <br><br>
+
+            <label for="asset_category">Asset Category:</label><br>
+            <select id="asset_category" name="asset_category">
+                <option value="">-- Select Category --</option>
+                <option value="vehicle">Vehicle</option>
+                <option value="machinery">Machinery</option>
+                <option value="building">Building</option>
+                <option value="office_equipment">Office Equipment</option>
+                <option value="furniture">Furniture</option>
+                <option value="land">Land</option>
+                <option value="software">Software</option>
+            </select>
+            <br><br>
+
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Acquisition Details</legend>
+
+            <label for="acquisition_date">Acquisition Date:</label><br>
+            <input 
+                type="date" 
+                id="acquisition_date" 
+                name="acquisition_date"
+            >
+            <br><br>
+
+            <label for="purchase_price">Acquisition Value / Purchase Price:</label><br>
+            <input 
+                type="number" 
+                id="purchase_price" 
+                name="purchase_price" 
+                min="0" 
+                step="1000" 
+                placeholder="50000000"
+            >
+            <br><br>
+
+            <label>Acquisition Method:</label><br>
+
+            <input 
+                type="radio" 
+                id="cash_purchase" 
+                name="acquisition_method" 
+                value="cash"
+            >
+            <label for="cash_purchase">Cash Purchase</label>
+            <br>
+
+            <input 
+                type="radio" 
+                id="credit_purchase" 
+                name="acquisition_method" 
+                value="credit"
+            >
+            <label for="credit_purchase">Credit Purchase</label>
+            <br>
+
+            <input 
+                type="radio" 
+                id="finance_lease" 
+                name="acquisition_method" 
+                value="finance_lease"
+            >
+            <label for="finance_lease">Finance Lease</label>
+            <br>
+
+            <input 
+                type="radio" 
+                id="donation" 
+                name="acquisition_method" 
+                value="donation"
+            >
+            <label for="donation">Donation</label>
+            <br><br>
+
+            <label for="vendor">Vendor/Supplier:</label><br>
+            <input 
+                type="text" 
+                id="vendor" 
+                name="vendor"
+            >
+            <br><br>
+
+            <label for="asset_document">Upload Acquisition Proof:</label><br>
+            <input 
+                type="file" 
+                id="asset_document" 
+                name="asset_document" 
+                accept=".pdf,.jpg,.jpeg,.png"
+            >
+            <br>
+
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Depreciation Information</legend>
+
+            <label for="useful_life">Useful Life (Years):</label><br>
+            <input 
+                type="number" 
+                id="useful_life" 
+                name="useful_life" 
+                min="1" 
+                max="50" 
+                placeholder="5"
+            >
+            <br><br>
+
+            <label for="salvage_value">Salvage Value:</label><br>
+            <input 
+                type="number" 
+                id="salvage_value" 
+                name="salvage_value" 
+                min="0" 
+                step="1000" 
+                placeholder="5000000"
+            >
+            <br><br>
+
+            <label for="depreciation_method">Depreciation Method:</label><br>
+            <select 
+                id="depreciation_method" 
+                name="depreciation_method"
+            >
+                <option value="">-- Select Method --</option>
+                <option value="straight_line">Straight-Line</option>
+                <option value="declining_balance">Declining Balance</option>
+            </select>
+            <br><br>
+
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Responsible Person &amp; Location</legend>
+
+            <label for="responsible_person">Responsible Person's Name:</label><br>
+            <input 
+                type="text" 
+                id="responsible_person" 
+                name="responsible_person"
+            >
+            <br><br>
+
+            <label for="department">User Department:</label><br>
+            <input 
+                type="text" 
+                id="department" 
+                name="department" 
+                placeholder="Production / Accounting"
+            >
+            <br><br>
+
+            <label for="location">Asset Physical Location:</label><br>
+            <input 
+                type="text" 
+                id="location" 
+                name="location" 
+                placeholder="3rd Floor, Main Building"
+            >
+            <br><br>
+
+            <label for="email">Responsible Person's Email:</label><br>
+            <input 
+                type="email" 
+                id="email" 
+                name="email"
+            >
+            <br><br>
+
+        </fieldset>
+
+
+        <br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
